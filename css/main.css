@@ -28,6 +28,60 @@ a{
     margin-left: auto;
     margin-right: auto;
 }
+.special-heading{
+    text-align: center;
+}
+.special-heading h2{
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.special-heading h2::before
+{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background-color: black;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.special-heading h2::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    bottom: -65%;
+    left: 50%;
+        transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border: 2px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+.special-heading p{
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+
 /* Small */
 @media (min-width: 768px) {
     .container {
@@ -228,4 +282,8 @@ header .form i{
 }
 .landing .active{
     background-color: var(--main-color);
+}
+.services{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
