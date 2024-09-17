@@ -304,3 +304,61 @@ header .form i {
 	line-height: 2;
 	color: #777;
 }
+.design {
+	background-image: url(../img/design-features.jpg);
+	height: 600px;
+	background-size: cover;
+	position: relative;
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+}
+.design::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+}
+.design .image {
+	z-index: 2;
+	flex: 1;
+	position: relative;
+	text-align: center;
+}
+.design img {
+	position: relative;
+	bottom: -150px;
+}
+@media (max-width: 767px) {
+	.design .image {
+		display: none;
+	}
+}
+.design .text {
+	color: white;
+	z-index: 2;
+	background-color: var(--transparent-color);
+	padding: 50px;
+	flex: 1;
+}
+.design h2 {
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+.design li {
+	padding: 15px 0;
+}
+.design li::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f108";
+	font-weight: 900;
+	margin-right: 20px;
+	position: relative;
+	top: 1px;
+}
