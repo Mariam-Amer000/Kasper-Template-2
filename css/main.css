@@ -74,7 +74,7 @@ a {
 }
 .special-heading p {
 	width: 550px;
-	margin: 0 auto 100px;
+	margin: 0 auto 60px;
 	max-width: 100%;
 	line-height: 2;
 	color: #777;
@@ -361,4 +361,81 @@ header .form i {
 	margin-right: 20px;
 	position: relative;
 	top: 1px;
+}
+.portfolio {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+}
+.portfolio ul {
+	display: flex;
+	justify-content: center;
+	text-transform: capitalize;
+	font-size: 15px;
+	margin-bottom: 60px;
+}
+.portfolio li {
+	padding: 10px;
+}
+.portfolio .active {
+	color: white;
+	background-color: var(--main-color);
+}
+.portfolio .gallry {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 2px;
+}
+.portfolio .image {
+	position: relative;
+	overflow: hidden;
+}
+@media (min-width: 768px) {
+	.portfolio .image {
+		flex-basis: 50%;
+	}
+}
+@media (min-width: 991px) {
+	.portfolio .image {
+		flex-basis: 25%;
+	}
+}
+.portfolio img {
+	width: 100%;
+	transition-duration: 0.3s;
+}
+.portfolio .image:hover img {
+	transform: rotate(3deg) scale(1.1);
+	-webkit-transform: rotate(3deg) scale(1.1);
+	-moz-transform: rotate(3deg) scale(1.1);
+	-ms-transform: rotate(3deg) scale(1.1);
+	-o-transform: rotate(3deg) scale(1.1);
+}
+.portfolio .text {
+	padding: 10px 15px;
+	position: absolute;
+	bottom: -100%;
+	background-color: white;
+	transition-duration: 0.3s;
+	width: 100%;
+}
+.portfolio .image:hover .text {
+	bottom: 0;
+}
+.portfolio h4 {
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.portfolio .text p {
+	font-weight: normal;
+	color: var(--main-color);
+}
+.portfolio .more {
+	background-color: var(--main-color);
+	color: white;
+	padding: 15px 20px;
+	display: block;
+	width: fit-content;
+	margin: 30px auto;
+	text-decoration: none;
+	text-transform: uppercase;
 }
